@@ -15,5 +15,7 @@ int main()
     track->computeVelocities();
     track->printTrackData();
 
+    delete track;
+
    return EXIT_SUCCESS; 
 }

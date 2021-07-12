@@ -20,7 +20,6 @@ class Track{
         std::vector<Point*> data;
 
 
-
 };
 
 #endif

@@ -10,6 +10,10 @@ Track::Track()
 
 Track::~Track()
 {
+    for(auto& point : data)
+    {
+        delete point;
+    }
 
 }
 
