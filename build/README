@@ -1,0 +1,8 @@
+#Coding Problem
+
+- cd into build directory
+- run make
+- executable will be in root
+
+Requirements:
+- This was built using using gcc version 10.2.0, lesser versions might require adding the flag -std=c++11 to CFLAGS variable in makefile.
