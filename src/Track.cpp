@@ -24,7 +24,6 @@ std::vector<Point*>& Track::getData()
 
 void Track::convertLLAtoECEF()
 {
-    auto s = data.size();
     for(auto &point: data)
     {
         auto lat = point->getLat();

@@ -17,7 +17,6 @@ scitec::Util::~Util()
 
 }
 
-
 void scitec::Util::latlogToEcef(global::lat_t& lat,global::long_t& lng, global::alt_t& alt, double& x, double& y, double& z)
 {
     double cosLat = std::cos(lat * global::CONVERT_DEGREES_RADIANS);
@@ -36,7 +35,6 @@ void scitec::Util::latlogToEcef(global::lat_t& lat,global::long_t& lng, global::
 
 void scitec::Util::loadTrackData(Track* track, std::istream& stream)
 {
-
     std::string line;
     while (std::getline(stream, line))
     {
@@ -53,10 +51,8 @@ void scitec::Util::loadTrackData(Track* track, std::istream& stream)
         std::getline(ss,tempValue,global::DELIM_COMMA);
         point->setAlt(std::stod(tempValue));
 
-        track->getData().push_back(point);
-        
+        track->getData().push_back(std::move(point));     
     }
-
 }
 
 double scitec::Util::computeDistance(const global::lat_t& latA, const global::long_t& longA, const global::alt_t& altA,

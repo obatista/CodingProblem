@@ -5,7 +5,7 @@
 
 Point::Point()
 {
-
+    //init vars
 }
 
 Point::~Point()
